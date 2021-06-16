@@ -21,7 +21,7 @@ setInterval(async () => {
 }, 1000 * 60 * 60);
 
 const notionClient = require("./notionClient");
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.get("/", async (req, res) => {
   const respForum = await getForum();
   res.render("index", { tags, respForum });
