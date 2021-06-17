@@ -5,7 +5,7 @@ document.addEventListener("click", (e) => {
 function handleUpVote(button) {
   button.disabled = true;
   const suggestionCard = button.closest("[data-suggestion-id]");
-  fetch("/up-vote-suggestion", {
+  fetch("/anime/anime-forum/up-vote-suggestion", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

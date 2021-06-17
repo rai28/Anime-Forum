@@ -22,11 +22,20 @@ setInterval(async () => {
 
 const notionClient = require("./notionClient");
 const PORT = process.env.PORT || 3000;
-app.get("/", async (req, res) => {
-  const respForum = await getForum();
-  res.render("index", { tags, respForum });
+
+app.get("/", (req, res) => {
+  res.render("index");
 });
-app.post("/create-forum", async (req, res) => {
+
+app.get("/anime", (req, res) => {
+  res.render("index");
+});
+
+app.get("/anime/anime-forum", async (req, res) => {
+  const respForum = await getForum();
+  res.render("anime-forum", { tags, respForum });
+});
+app.post("/anime/anime-forum/create-forum", async (req, res) => {
   const { title, author, description, tagIds = [] } = req.body;
 
   await notionClient.createForum({
@@ -39,12 +48,12 @@ app.post("/create-forum", async (req, res) => {
           return { id: tagId };
         }),
   });
-  res.redirect("/");
+  res.redirect("/anime/anime-forum");
 });
-app.get("/about-this", (req, res) => {
+app.get("/anime/anime-forum/about-this", (req, res) => {
   res.render("about-this");
 });
-app.post("/up-vote-suggestion", async (req, res) => {
+app.post("/anime/anime-forum/up-vote-suggestion", async (req, res) => {
   const votes = await upVoteSuggestion(req.body.suggestionId);
   res.json({ votes });
 });

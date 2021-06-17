@@ -1,0 +1,114 @@
+*:focus {
+  outline: none;
+}
+html {
+  --scrollbarBG: #cfd8dc;
+  --thumbBG: #d8365e;
+}
+body::-webkit-scrollbar {
+  width: 11px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  font-family: "Roboto Slab", serif !important;
+  text-decoration: none;
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+.header-image {
+  text-align: right;
+  margin: 20px 20px 0 20px;
+  height: 100px;
+  width: 100px;
+}
+.header-content {
+  text-align: right;
+}
+.about-this-para {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 463px;
+  /* height: 165px; */
+  border: 2px solid black !important;
+}
+.dashboard-main-heading {
+  margin-top: 10px;
+  font-size: 25px;
+  font-weight: bolder;
+  text-align: center;
+}
+.homepage-content {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.home-page-last-heading {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 350px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.left-hand-icon {
+  width: 30px;
+  height: 30px;
+}
+.my-footer-buttons {
+  margin: 40px 0 40px 0;
+  text-align: center;
+}
+.my-anime-list-button {
+  text-decoration: none;
+  padding: 10px;
+  border: 2px solid black !important;
+  border-radius: 30px !important;
+  max-width: fit-content;
+  text-align: center;
+  color: black;
+  background-color: #ffe76a;
+}
+.create-forum-button {
+  margin-left: 20px;
+  background-color: #f8adad;
+}
+a,
+a:hover {
+  color: black !important;
+}
+.help-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.bottom-help {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+@media screen and (max-width: 1356px) {
+  .bottom-help {
+    display: none !important;
+  }
+}

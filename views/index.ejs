@@ -4,89 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Share your best anime experiences here and give heart to others favourites.">
-    <title>50 Words Anime</title>
-    <link rel="stylesheet" href="styles.css"type="text/css">
+        <link rel="stylesheet" href="../styles/homepage-styles.css"type="text/css">
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-<script src="script.js"></script>
+    <title>Ritesh Anime Forum</title>
 </head>
 <body>
-    <style>
-       
-    </style>
     <div class="header-content">
            
-        <img src="https://image.flaticon.com/icons/png/512/1120/1120972.png" class="header-image" alt="">
+        <a href="/anime"><img src="https://image.flaticon.com/icons/png/512/1120/1120972.png" class="header-image" alt=""></a>
    
 </div>
-  <div class="bottom-help">
-    <a href="./about-this" target="blank"><img src="https://image.flaticon.com/icons/png/512/906/906794.png"class="help-image" alt=""></a>
+<div class="bottom-help">
+    <a href="/anime/anime-forum/about-this" target="blank"><img src="https://image.flaticon.com/icons/png/512/906/906794.png"class="help-image" alt=""></a>
     </div>
-    <div class="container">
-        <!-- <h1>50 Words Anime</h1> -->
-        <form action="/create-forum"method="POST">
-        <div class="">
-            <label for="title">Anime Name</label>
-            <input type="text"name="title" id="title"required
-            class="anime-input-name form-control">
-        </div>
-        <div class="category-menu">
-            <label for="tagIds">Category Of Anime</label>
-            <div class="col-2 drp-menus">
-                <select name="tagIds" id="tagIds"class="dropdown-menus">
-                   <% tags.forEach(tag => {%>
-                    <option value="<%=tag.id %>"><%=tag.name %></option>
-                   <%}) %> 
-                </select>
+    <div class="main-div container">
+        <div class="form-control about-this-para">
+            <p class="dashboard-main-heading">Welcome To My Anime Dashboard</p>
+            </div>
+            <p class="homepage-content">I made this forum to curate a list of favorite anime of my friends and store to my Notion Anime Page. Here you can see what animes I have watched what I am watching and share your favorite ones with me.
+
+            </p>
+
+            <p class="home-page-last-heading"><img src="https://image.flaticon.com/icons/png/512/476/476758.png" alt="" class="left-hand-icon"> &nbsp;Check my list or create a forum of yours.</p>
+            <div class="my-footer-buttons">
+                <a href="" class="my-anime-list-button">My Anime List</a>
+            <a href="/anime/anime-forum" class="create-forum-button my-anime-list-button">&nbsp;Create Forum&nbsp;</a>
             </div>
         </div>
-        <div class="">
-          <label for="author" class="personNameLabel">Your Name</label>
-          <input type="text"name="author" id="author"required
-          class="person-input-name form-control">
-      </div>
-        <div class="form-group">
-            <label for="description"></label>
-            <textarea name="description" id="description" class="form-control description-input"rows="10" required maxlength="250"placeholder="Write your thoughts about this anime here in 50 words..."></textarea>
-        </div>
-        <div class="submit-button-div"> <button type="submit" class="submit-button">Create Forum</button></div>
-       
-        </form>
-        
-            <P class="forum-post-heading">Forum Posts</P>
-       
-        <div class="row g-5 mt-3 hello-user">
-            <% respForum.forEach(item => { %>
-              <div class="col-12 col-sm-12 col-md-6 col-lg-4 ">
-                <div class="card forum-data" data-suggestion-id="<%= item.id %>">
-                  <div class="card-header d-flex justify-content-between align-items-center">
-                    <div class="main-title"><%= item.title %></div>
-                    <div class="d-flex justify-content-center align-items-center">
-                      <p>By - <%= item.author %></p>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <p><%= item.description %></p>
-                    <% item.tags.forEach(tag => { %>
-                      <div class="badge bg-secondary rounded-pill">
-                        <%= tag.name %>
-                      </div>
-                    <% }) %>
-                    
-                    <div class="d-flex align-items-end flex-row-reverse">
-                      
-                        <button id="heart-btn" data-up-vote-btn class="px-1 py-0 btn mt-auto p-2">🧡</button>
-                        <span class="px-2 py-0 "data-up-vote-count><%= item.votes %></span>
-                    </div>
-                    
-                  </div>
-                </div>
-              </div>
-            <% }) %>
-          </div>
-    </div>
+    
 </body>
 </html>

@@ -132,26 +132,3 @@ body::-webkit-scrollbar-thumb {
     display: none !important;
   }
 }
-.about-this-para {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 800px;
-  border: 2px solid black !important;
-  font-weight: bolder;
-}
-.about-this-imgs {
-  width: 50px;
-  height: 50px;
-}
-.about-this-data-img {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  text-align: center;
-}
-li {
-  list-style: none;
-}
-.fork-repo-para {
-  font-weight: bolder;
-  margin-top: 10px;
-}
