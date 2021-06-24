@@ -50,7 +50,7 @@ li {
   padding: 10px;
   border: 2px solid black !important;
   border-radius: 10px !important;
-  max-width: fit-content;
+  width: max-content !important;
   text-align: center;
 }
 .header-image {

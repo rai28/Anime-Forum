@@ -24,7 +24,7 @@ body::-webkit-scrollbar-thumb {
 .anime-input-name {
   margin-top: 7px;
   height: 50px;
-  max-width: fit-content;
+  width: auto !important;
   border: 2px solid black !important;
   border-radius: 10px !important;
 }
@@ -58,7 +58,8 @@ body::-webkit-scrollbar-thumb {
   padding: 10px;
   border: 2px solid black !important;
   border-radius: 10px !important;
-  max-width: fit-content;
+  /* max-width: fit-content; */
+  width: max-content !important;
   text-align: center;
 }
 .hello-user {
@@ -108,7 +109,8 @@ body::-webkit-scrollbar-thumb {
 .person-input-name {
   margin-top: 7px;
   height: 50px;
-  max-width: fit-content;
+  /* max-width: fit-content; */
+  width: auto !important;
   border: 2px solid black !important;
   border-radius: 10px !important;
 }
